@@ -1,0 +1,8 @@
+-- กำหนดข้อมูลผู้ใช้งาน --
+git config --global user.name "nitipattime"
+git config --global user.email "nitipattime@gmail.com"
+
+-- คำสั่งเช็คข้อมูลที่กำหนดไว้ --
+git config --list
+git config --global --list
+

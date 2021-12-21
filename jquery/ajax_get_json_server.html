@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax get JSON from Server</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Product data</h1>
+            <p class="lead">product data list</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Barcode</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            // โหลดข้อมูลจากแหล่งภายนอก (domain อื่น)
+            $.getJSON('https://www.itgenius.co.th/sandbox_api/ministockapi/public/api/products', function(result){
+                // console.log(result)
+                // loop ข้อมูลที่ได้
+                let trHTML = ""
+
+                $.each(result, function(i, item){
+                    trHTML += `<tr>
+                    <td>${item.id}</td>
+                    <td>${item.product_name}</td>
+                    <td>${item.product_barcode}</td>
+                    <td>${item.product_qty}</td>
+                    <td>${item.product_price}</td>
+                    <td>${item.product_date}</td>
+                </tr>`
+                })
+
+                // เติมข้อมูลลงในตาราง
+                $("table tbody").append(trHTML)
+               
+            })
+        })
+    </script>
+</body>
+</html>

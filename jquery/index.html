@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Jquery</title>
+    <style>
+        .setbg {
+            background-color: aqua;
+            color: brown;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Basic JQuery</h1>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti fugit iste asperiores voluptate iusto voluptas, accusamus veritatis nulla praesentium ducimus deserunt sint voluptatum laboriosam fuga maiores! Ea praesentium voluptatum totam.</p>
+    <p class="p2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor error pariatur voluptates hic earum, velit dolore numquam corporis laborum optio iste quasi quas recusandae ullam architecto cumque voluptatum repudiandae culpa.</p>
+    <span class="p2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor error pariatur voluptates hic earum, velit dolore numquam corporis laborum optio iste quasi quas recusandae ullam architecto cumque voluptatum repudiandae culpa.</span>
+    <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt sed molestiae necessitatibus. Nulla, deserunt illo perferendis excepturi error iusto ipsum asperiores maxime, id soluta nesciunt sint obcaecati autem dolorem adipisci.</article>
+
+    <!-- ใส่ไว้ที่ body ดีกว่า -->
+    <script src="jquery-3.5.1.min.js"></script>
+
+    <!-- call using Jquery -->
+    <script>
+        // $ = document.
+        // Arrow Function ES6
+        // $(()=>{
+            // 
+        // })
+        $(function(){ // ES5
+            // alert("OK")
+            // การเข้าถึง tag h1
+            $("h1").css('color','red')
+            // เข้าถึง tag p ที่มี id=p1
+            $("#p1").css('background-color','yellow')
+            // เข้าถึงถึง p ที่เป็น class p2
+            $("p.p2").css('background-color','pink')
+            $("span.p2").css('background-color','green')
+            // การเรียกใช้ class css
+            $("article").addClass('setbg') 
+            // การลบ class css ออก
+            $("article").removeClass('setbg')
+            // การสลับการทำงาน ระหว่าง add class กับ remove class
+            $("article").toggleClass('setbg')
+        })
+
+    </script>
+</body>
+</html>

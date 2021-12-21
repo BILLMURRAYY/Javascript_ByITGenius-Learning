@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Data</title>
+</head>
+
+<body>
+    <h1>Input Data</h1>
+    <form name="myform" action="#">
+        <div>
+            <label for="">Fullname</label>
+            <input type="text" name="fullname" onkeyup="submitform()">
+        </div>
+        <div>
+            <label for="">Address</label>
+            <input type="text" name="address" onkeyup="submitform()">
+        </div>
+        <div>
+            <button type="button" onclick="submitform()">Submit</button>
+        </div>
+    </form>
+    <hr>
+    <div id="result"></div>
+
+    <script src="16_form.js"></script>
+</body>
+</html>

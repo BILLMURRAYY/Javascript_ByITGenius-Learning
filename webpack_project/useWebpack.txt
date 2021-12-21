@@ -1,0 +1,17 @@
+การติดตั้ง Webpack ลงใน project
+---
+step 1: npm init -y
+step 2: npm install webpack --save-dev
+step 3: setting in file package.json ("scripts":)
+    - "build": "webpack --mode development --entry ./src/js/main.js --output ./dist/bundle.js"
+step 4: run เพื่อ build    
+    - npm run build (it will give install webpack-cli)
+    - will get dist/bundle.js
+step 5: แก้ลิ้งค์ js หน้า index เป็นไฟล์ 
+    - dist/bundle.js
+
+
+Build production (สำหรับไว้ใช้จริง)
+---   
+step 1: setting in file package.json ("scripts":)
+    - "build:prod": "webpack --mode production --entry ./src/js/main.js --output ./dist/bundle.min.js"

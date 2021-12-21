@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Event</title>
+    <style>
+        p{
+            border: 1px solid green;
+            background-color: orange;
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <button>Click Me</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et nam, asperiores eum, saepe dolore magnam dignissimos repellendus praesentium doloremque quos animi fugit! Ipsum praesentium saepe laborum nam consequatur iure repellendus.</p>
+    
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(function(){
+            $('button').click(function(){
+                // alert("Yehhhhh")
+               //  $("p").hide(3000)
+               //  $("p").show(3000)
+               // $("p").fadeIn(3000)
+                // $("p").fadeOut(1000)
+                // $("p").fadeToggle(1000)
+                // $("p").slideUp()
+                // $("p").slideDown()
+                $("p").slideToggle()
+            })
+        })
+        // -- jQuery Event --
+        // .click()
+        // .dbclick()
+        // .mouseover()
+        // .mouseout()
+        // .hover()
+        // .focus()
+        // .bind()
+        // .blur()
+        // .keydown()
+    </script>
+</body>
+</html>
